@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+body{
+     min-height: 100vh;
+     width: 100%;
+     background-color: #f4f4f4;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     color: #333;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6%;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.logo {
+    width: 70px;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    padding: 8px 13px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #868ecf;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.nav-links ul li a:hover {
+    color: #4A90E2;
+}
+
+/* Hero Section */
+.hero{
+    margin-top: 100px;
+    padding: 100px 50px;
+    background-color: #eef2f7;
+    text-align: center;
+}
+.hero h1{
+    font-size: 3rem;
+    color: #4A90E2;
+}
+.hero p{
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* ADHD Info Section with Background */
+.adhd-info{
+    background-image: url('image/background.png');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.adhd-content{
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: center;
+}
+.adhd-content h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.adhd-content p{
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Footer Section */
+.footer{
+    width: 100%;
+    background-color: #4A90E2;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+.footer h4{
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+.footer p{
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px){
+    nav{
+        flex-direction: column;
+        padding: 10px;
+    }
+    .nav-links ul{
+        flex-direction: column;
+    }
+    .nav-links ul li{
+        margin-bottom: 10px;
+    }
+    .hero h1{
+        font-size: 2.2rem;
+    }
+    .hero p, .adhd-content p{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px){
+    .hero h1{
+        font-size: 1.8rem;
+    }
+    .hero p, .adhd-content p{
+        font-size: 0.9rem;
+    }
+}
